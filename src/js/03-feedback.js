@@ -14,7 +14,7 @@ let formData = {};
 
 refs.form.addEventListener('submit', onFormSubmit);
 // refs.textarea.addEventListener('input', throttle(onTextareaInput, 5));
-refs.form.addEventListener('input', throttle(onTextareaInput, 5));
+refs.form.addEventListener('input', throttle(onTextareaInput, 500));
 // refs.inputEmail.addEventListener('input', throttle(onTextareaInput, 5));
 
 populateTextarea();
