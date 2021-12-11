@@ -17,7 +17,6 @@ refs.form.addEventListener('submit', onFormSubmit);
 refs.form.addEventListener('input', throttle(onTextareaInput, 5));
 // refs.inputEmail.addEventListener('input', throttle(onTextareaInput, 5));
 
-
 populateTextarea();
 /*
  * - Останавливаем поведение по умолчанию
@@ -26,29 +25,19 @@ populateTextarea();
  */
 function onFormSubmit(evt) {
    evt.preventDefault();
-
    evt.currentTarget.reset();
    localStorage.removeItem(STORAGE_KEY);
    // console.log('Отправляем форму');
    console.log(formData);
    formData = ''
 }
-// function onTextareaInput(evt) {
-//    const message = evt.target.value;
-//    localStorage.setItem(STORAGE_KEY, message);
-// }
-// =====записываем данные из форм в хранилище
 /*
  * - Получаем значение поля
  * - преобразовываем в формат JSON.stringify
  * - Сохраняем его в хранилище
  * - Можно добавить throttle
  */
-
-
-
 function onTextareaInput() {
-
    // const message = evt.target.value;
    // localStorage.setItem(STORAGE_KEY, message);
    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
@@ -57,7 +46,6 @@ function onTextareaInput() {
  * - Получаем значение из хранилища
  * - Если там что-то было, обновляем DOM
  */
-
 function populateTextarea() {
    const savedMessage = localStorage.getItem(STORAGE_KEY);
    if (savedMessage) {
@@ -66,7 +54,6 @@ function populateTextarea() {
       refs.inputEmail.value = obMessage.email;
       // console.log(obMessage)
    }
-
 }
 /*
  * получаем значения из инпута и textaria и присваиваем в formData
