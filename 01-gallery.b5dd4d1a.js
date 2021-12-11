@@ -6,6 +6,6 @@ var t=arguments[3];function e(t){return(e="function"==typeof Symbol&&"symbol"==t
 },{}],"kz9M":[function(require,module,exports) {
 
 },{}],"TfQ5":[function(require,module,exports) {
-"use strict";var e=require("./gallery-items.js"),l=r(require("simplelightbox"));function r(e){return e&&e.__esModule?e:{default:e}}require("simplelightbox/dist/simple-lightbox.min.css"),console.log(e.galleryItems);const i=document.querySelector(".gallery"),t=a(e.galleryItems);function a(e){return e.map(({preview:e,description:l,original:r})=>`\n         <a class="gallery__item" href="${r}">\n         <img class="gallery__image" src="${e}" title="${l}" />\n         </a>\n         `).join("")}i.insertAdjacentHTML("beforeend",t);let n=new l.default(".gallery a",{doubleTapZoom:1.5,captionDelay:250});
+"use strict";var e=require("./gallery-items.js"),l=i(require("simplelightbox"));function i(e){return e&&e.__esModule?e:{default:e}}require("simplelightbox/dist/simple-lightbox.min.css");const r=document.querySelector(".gallery"),t=a(e.galleryItems);function a(e){return e.map(({preview:e,description:l,original:i})=>`\n         <a class="gallery__item" href="${i}">\n         <img class="gallery__image" src="${e}" title="${l}" />\n         </a>\n         `).join("")}r.insertAdjacentHTML("beforeend",t);let n=new l.default(".gallery a",{doubleTapZoom:1.5,captionDelay:250});
 },{"./gallery-items.js":"q5Rn","simplelightbox":"yx6k","simplelightbox/dist/simple-lightbox.min.css":"kz9M"}]},{},["TfQ5"], null)
-//# sourceMappingURL=/goit-js-hw-08/01-gallery.09563855.js.map
+//# sourceMappingURL=/goit-js-hw-08/01-gallery.b5dd4d1a.js.map
