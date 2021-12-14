@@ -26,7 +26,8 @@ function onFormSubmit(evt) {
    let story;
    story = JSON.parse(localStorage.getItem(STORAGE_KEY))
    if (story === null) {
-      story = '';
+      // story = '';
+      return
    };
    // ===вывод сабмита=========
    console.log(story);
