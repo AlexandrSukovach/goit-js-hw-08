@@ -1,7 +1,24 @@
 import throttle from 'lodash.throttle';
 
-const iframe = document.querySelector('iframe');
-const player = new Vimeo.Player(iframe);
+// const iframe = document.querySelector('iframe');
+// ===убираем при подключение через библиотеку npm====
+// const player = new Vimeo.Player(iframe);
+// ==================player npm====================
+import Player from '@vimeo/player';
+const options = {
+   id: 59777392,
+   width: 640,
+   loop: true
+};
+
+const player = new Player('vimeo-player', options);
+
+player.setVolume(0);
+
+player.on('play', function () {
+   console.log('played the video!');
+});
+// ======================================
 
 player.on('timeupdate', throttle(function (second) {
    let timer = 0;

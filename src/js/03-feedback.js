@@ -23,7 +23,9 @@ populateTextarea();
 function onFormSubmit(evt) {
    evt.preventDefault();
    evt.currentTarget.reset();
-   let story;
+   // let story;
+   // ====или=====
+   let story = null;
    story = JSON.parse(localStorage.getItem(STORAGE_KEY))
    if (story === null) {
       // story = '';
